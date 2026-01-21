@@ -1,0 +1,7 @@
+[AGENTS_API] 2026/01/21 21:20:41 logger.go:31: Logger initialized
+[AGENTS_API] 2026/01/21 21:20:41 main.go:24: 🚀 Agents API starting
+[AGENTS_API] 2026/01/21 21:20:41 main.go:40: 🚀 Agents API running on :9000
+[AGENTS_API] 2026/01/21 21:20:41 main.go:42: ❌ Failed to start Agents API:listen tcp :9000: bind: address already in use
+[AGENTS_API] 2026/01/21 21:21:09 logger.go:31: Logger initialized
+[AGENTS_API] 2026/01/21 21:21:09 main.go:24: 🚀 Agents API starting
+[AGENTS_API] 2026/01/21 21:21:09 main.go:40: 🚀 Agents API running on :9000
