@@ -7,6 +7,12 @@
 *.dll
 *.so
 *.dylib
+ai-core
+ai-core-*
+
+# Log files
+logs/
+*.log
 
 # Test binary, built with `go test -c`
 *.test
@@ -24,8 +30,10 @@ profile.cov
 go.work
 go.work.sum
 
-# env file
+# Environment files (keep .env.example)
 .env
+.env.local
+.env.*.local
 
 # Editor/IDE
 # .idea/
