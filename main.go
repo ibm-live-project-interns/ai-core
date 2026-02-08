@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"net/http"
+	"time"
 
 	"github.com/gin-gonic/gin"
 	"github.com/ibm-live-project-interns/ai-core/ai"
@@ -34,13 +35,14 @@ func main() {
 
 	logger.Info("🚀 AI-Core starting...")
 
-	// Initialize Watson client
+	// Initialize Watson client (non-fatal - runs in degraded mode without keys)
 	var err error
 	watsonClient, err = ai.NewDefaultWatsonClient()
 	if err != nil {
-		logger.Fatal("Failed to initialize Watson client: %v", err)
+		logger.Warn("Watson client not available: %v. AI Core will run in degraded mode.", err)
+	} else {
+		logger.Info("✅ Watson AI client initialized")
 	}
-	logger.Info("✅ Watson AI client initialized")
 
 	// Initialize API Gateway client for forwarding
 	apiGatewayURL := config.GetEnv("API_GATEWAY_URL", "http://api-gateway:8080")
@@ -59,9 +61,14 @@ func main() {
 
 	// Health check
 	router.GET("/health", func(c *gin.Context) {
+		status := "healthy"
+		if watsonClient == nil {
+			status = "degraded"
+		}
 		c.JSON(http.StatusOK, gin.H{
-			"status":  "healthy",
+			"status":  status,
 			"service": "ai-core",
+			"watson":  watsonClient != nil,
 		})
 	})
 
@@ -91,7 +98,10 @@ type EventRequest struct {
 type AIResponse struct {
 	Severity          string        `json:"severity"`
 	Explanation       string        `json:"explanation"`
+	RootCause         string        `json:"root_cause"`
+	Impact            string        `json:"impact"`
 	RecommendedAction string        `json:"recommended_action"`
+	Confidence        int           `json:"confidence,omitempty"`
 	OriginalEvent     *EventRequest `json:"original_event,omitempty"`
 }
 
@@ -106,6 +116,20 @@ func handleEvent(c *gin.Context) {
 
 	logger.Debug("Processing event: type=%s, message=%s", evt.Type, evt.Message)
 
+	// Check if Watson client is available
+	if watsonClient == nil {
+		logger.Warn("Watson client not initialized - returning degraded response for event type=%s", evt.Type)
+		c.JSON(http.StatusServiceUnavailable, gin.H{
+			"error":              "AI service not configured",
+			"detail":             "Watson API keys not provided",
+			"fallback":           true,
+			"severity":           evt.Severity,
+			"explanation":        "AI processing unavailable - Watson API keys not configured",
+			"recommended_action": "Configure WATSONX_API_KEYS environment variable",
+		})
+		return
+	}
+
 	// Call Watson AI
 	aiReq := ai.AIRequest{
 		EventType: evt.Type,
@@ -114,12 +138,14 @@ func handleEvent(c *gin.Context) {
 
 	result, err := watsonClient.Analyze(aiReq)
 	if err != nil {
-		logger.Error("AI processing failed: %v", err)
-		// Return fallback response
-		c.JSON(http.StatusOK, AIResponse{
-			Severity:          "unknown",
-			Explanation:       "AI processing failed: " + err.Error(),
-			RecommendedAction: "Check AI service or logs",
+		logger.Error("AI processing failed for event type=%s source=%s: %v", evt.Type, evt.SourceHost, err)
+		c.JSON(http.StatusServiceUnavailable, gin.H{
+			"error":    "AI processing failed",
+			"detail":   err.Error(),
+			"fallback": true,
+			"severity":          "unknown",
+			"explanation":       "AI processing unavailable - manual review required",
+			"recommended_action": "Check AI service logs and Watson API connectivity",
 		})
 		return
 	}
@@ -127,7 +153,10 @@ func handleEvent(c *gin.Context) {
 	response := AIResponse{
 		Severity:          result.Severity,
 		Explanation:       result.Explanation,
+		RootCause:         result.RootCause,
+		Impact:            result.Impact,
 		RecommendedAction: result.RecommendedAction,
+		Confidence:        result.Confidence,
 	}
 
 	// Optionally forward enriched event to API Gateway
@@ -140,8 +169,11 @@ func handleEvent(c *gin.Context) {
 	c.JSON(http.StatusOK, response)
 }
 
-// forwardToAPIGateway sends the enriched event to API Gateway
+// forwardToAPIGateway sends the enriched event to API Gateway with a timeout
 func forwardToAPIGateway(event EventRequest, aiResult *ai.AIResponse) {
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
 	enrichedEvent := map[string]interface{}{
 		"type":        event.Type,
 		"message":     event.Message,
@@ -150,23 +182,31 @@ func forwardToAPIGateway(event EventRequest, aiResult *ai.AIResponse) {
 		"event_type":  event.EventType,
 		"category":    event.Category,
 		"severity":    aiResult.Severity,
-		"ai_analysis": map[string]string{
+		"ai_analysis": map[string]interface{}{
 			"severity":           aiResult.Severity,
 			"explanation":        aiResult.Explanation,
+			"root_cause":         aiResult.RootCause,
+			"impact":             aiResult.Impact,
 			"recommended_action": aiResult.RecommendedAction,
+			"confidence":         float64(aiResult.Confidence),
 		},
 	}
 
-	ctx := context.Background()
+	logger.Debug("Forwarding enriched event to API Gateway: type=%s severity=%s source=%s", event.Type, aiResult.Severity, event.SourceHost)
+
 	resp, err := gatewayClient.Post(ctx, "/api/internal/events", enrichedEvent, nil)
 	if err != nil {
-		logger.Error("Failed to forward to API Gateway: %v", err)
+		if ctx.Err() == context.DeadlineExceeded {
+			logger.Error("Timeout forwarding to API Gateway (10s): %v", err)
+		} else {
+			logger.Error("Failed to forward to API Gateway: %v", err)
+		}
 		return
 	}
 
 	if !resp.IsSuccess() {
-		logger.Warn("API Gateway returned non-success: %d", resp.StatusCode)
+		logger.Warn("API Gateway returned non-success status %d for event type=%s", resp.StatusCode, event.Type)
 	} else {
-		logger.Debug("Event forwarded to API Gateway successfully")
+		logger.Info("Event forwarded to API Gateway successfully: type=%s severity=%s", event.Type, aiResult.Severity)
 	}
 }

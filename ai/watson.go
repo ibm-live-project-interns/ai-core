@@ -201,6 +201,8 @@ type AIRequest struct {
 type AIResponse struct {
 	Severity          string `json:"severity"`
 	Explanation       string `json:"explanation"`
+	RootCause         string `json:"root_cause"`
+	Impact            string `json:"impact"`
 	RecommendedAction string `json:"recommended_action"`
 	Confidence        int    `json:"confidence,omitempty"`
 }
@@ -293,14 +295,17 @@ Event message: %s%s
 </System data>
 
 <Instructions>
-Use the system data to answer the question.
+You are a network operations AI analyst. Analyze the event and respond ONLY in valid JSON with these fields:
+- severity: one of critical/high/medium/low/info
+- explanation: brief summary of what the event means
+- root_cause: the most likely root cause of this event
+- impact: the business or operational impact of this event
+- recommended_action: specific steps to resolve or investigate
 Do NOT mention system data or how you derived the answer.
-Respond ONLY in valid JSON with fields:
-severity (critical/high/medium/low/info), explanation, recommended_action.
 </Instructions>
 
 <Question>
-What is the severity of the event and what action should be taken?
+What is the severity, root cause, business impact, and recommended action for this event?
 </Question>`,
 		req.EventType,
 		req.Message,
