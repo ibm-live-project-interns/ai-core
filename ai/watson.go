@@ -301,11 +301,12 @@ You are a network operations AI analyst. Analyze the event and respond ONLY in v
 - root_cause: the most likely root cause of this event
 - impact: the business or operational impact of this event
 - recommended_action: specific steps to resolve or investigate
+- confidence: your confidence level in this analysis as an integer from 0 to 100
 Do NOT mention system data or how you derived the answer.
 </Instructions>
 
 <Question>
-What is the severity, root cause, business impact, and recommended action for this event?
+What is the severity, root cause, business impact, recommended action, and your confidence level for this event?
 </Question>`,
 		req.EventType,
 		req.Message,
