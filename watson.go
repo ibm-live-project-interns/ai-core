@@ -34,12 +34,12 @@ func getNextAPIKey() (string, error) {
 		apiKeys = strings.Split(raw, ",")
 	}
 
-	key := apiKeys[keyIndex]
+	key := strings.TrimSpace(apiKeys[keyIndex])
 	keyIndex = (keyIndex + 1) % len(apiKeys)
 	return key, nil
 }
 
-/* ---------------- IAM TOKEN CACHE (PER KEY) ---------------- */
+/* ---------------- IAM TOKEN CACHE ---------------- */
 
 type tokenEntry struct {
 	token  string
@@ -52,6 +52,7 @@ var (
 )
 
 func getIAMToken(apiKey string) (string, error) {
+
 	tokenMutex.Lock()
 	defer tokenMutex.Unlock()
 
@@ -77,7 +78,8 @@ func getIAMToken(apiKey string) (string, error) {
 	req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
 	req.Header.Set("Accept", "application/json")
 
-	client := &http.Client{Timeout: 10 * time.Second}
+	client := &http.Client{Timeout: 30 * time.Second}
+
 	resp, err := client.Do(req)
 	if err != nil {
 		return "", err
@@ -106,9 +108,43 @@ func getIAMToken(apiKey string) (string, error) {
 	return tokenResp.AccessToken, nil
 }
 
-/* ---------------- SAFE JSON EXTRACTOR ---------------- */
+/* ---------------- BUILD RAG FROM RELEVANT CVEs ---------------- */
+
+func buildRagFromCVEs(cves []CVE) string {
+
+	if len(cves) == 0 {
+		return ""
+	}
+
+	// limit to top 5
+	if len(cves) > 5 {
+		cves = cves[:5]
+	}
+
+	var b strings.Builder
+	b.WriteString("<Rag>\n")
+
+	for _, c := range cves {
+
+		score := "N/A"
+		if c.CVSSScore > 0 {
+			score = fmt.Sprintf("%.1f", c.CVSSScore)
+		}
+
+		b.WriteString(
+			fmt.Sprintf("%s - %s/%s - CVSS %s\n",
+				c.ID, c.Vendor, c.Product, score),
+		)
+	}
+
+	b.WriteString("</Rag>\n")
+	return b.String()
+}
+
+/* ---------------- JSON EXTRACTOR ---------------- */
 
 func extractFirstJSON(text string) string {
+
 	start := strings.Index(text, "{")
 	if start == -1 {
 		return ""
@@ -126,12 +162,14 @@ func extractFirstJSON(text string) string {
 			}
 		}
 	}
+
 	return ""
 }
 
 /* ---------------- CALL WATSONX ---------------- */
 
-func CallWatsonAI(event Event) (UnifiedResponse, error) {
+func CallWatsonAI(event Event, cves []CVE) (UnifiedResponse, error) {
+
 	apiKey, err := getNextAPIKey()
 	if err != nil {
 		return UnifiedResponse{}, err
@@ -144,11 +182,13 @@ func CallWatsonAI(event Event) (UnifiedResponse, error) {
 		return UnifiedResponse{}, errors.New("Watsonx env vars missing")
 	}
 
-	Logger.Println("🔐 Fetching IAM token")
 	token, err := getIAMToken(apiKey)
 	if err != nil {
 		return UnifiedResponse{}, err
 	}
+
+	// 🔥 USE RELEVANT CVEs PASSED BY DISPATCHER
+	ragData := BuildCVERagBlockFromList(cves)
 
 	endpoint := fmt.Sprintf(
 		"https://%s.ml.cloud.ibm.com/ml/v1/text/generation?version=2024-01-10",
@@ -156,21 +196,34 @@ func CallWatsonAI(event Event) (UnifiedResponse, error) {
 	)
 
 	prompt := fmt.Sprintf(
-		`<System data>
+`%s
+
+<System data>
 Event type: %s
 Event message: %s
 </System data>
 
 <Instructions>
-Use the system data to answer the question.
-Do NOT mention system data.
-Respond ONLY in valid JSON with fields:
-severity, explanation, recommended_action.
+Analyze the event.
+
+Use CVE data ONLY if relevant.
+Do NOT mention RAG or system data.
+
+Respond ONLY with valid JSON.
+No extra text.
+
+Format:
+{
+  "severity": "low | medium | high | critical",
+  "explanation": "brief reason",
+  "recommended_action": "clear action"
+}
 </Instructions>
 
 <Question>
-What is the severity and recommended action?
+Determine severity and recommended action.
 </Question>`,
+		ragData,
 		event.Type,
 		event.Message,
 	)
@@ -181,12 +234,7 @@ What is the severity and recommended action?
 		"input":      prompt,
 		"parameters": map[string]interface{}{
 			"temperature":    0.1,
-			"max_new_tokens": 120,
-			"stop": []string{
-				"\n\nType:",
-				"\n\nMessage:",
-				"</System data>",
-			},
+			"max_new_tokens": 400,
 		},
 	}
 
@@ -201,9 +249,8 @@ What is the severity and recommended action?
 	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("Accept", "application/json")
 
-	Logger.Println("🤖 Calling Watsonx model")
+	client := &http.Client{Timeout: 30 * time.Second}
 
-	client := &http.Client{Timeout: 20 * time.Second}
 	resp, err := client.Do(req)
 	if err != nil {
 		return UnifiedResponse{}, err
@@ -212,7 +259,11 @@ What is the severity and recommended action?
 
 	if resp.StatusCode != 200 {
 		body, _ := io.ReadAll(resp.Body)
-		return UnifiedResponse{}, fmt.Errorf("Watsonx failed %d: %s", resp.StatusCode, string(body))
+		return UnifiedResponse{}, fmt.Errorf(
+			"Watsonx failed %d: %s",
+			resp.StatusCode,
+			string(body),
+		)
 	}
 
 	var res struct {
@@ -229,11 +280,13 @@ What is the severity and recommended action?
 		return UnifiedResponse{}, errors.New("empty response from Watsonx")
 	}
 
-	cleanJSON := extractFirstJSON(res.Results[0].GeneratedText)
+	raw := res.Results[0].GeneratedText
+	cleanJSON := extractFirstJSON(raw)
+
 	if cleanJSON == "" {
 		return UnifiedResponse{
 			Severity:          "unknown",
-			Explanation:       res.Results[0].GeneratedText,
+			Explanation:       strings.TrimSpace(raw),
 			RecommendedAction: "Manual review required",
 		}, nil
 	}
@@ -247,6 +300,5 @@ What is the severity and recommended action?
 		}, nil
 	}
 
-	Logger.Println("✅ Watsonx response parsed successfully")
 	return ai, nil
 }

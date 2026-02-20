@@ -5,3 +5,743 @@
 [AGENTS_API] 2026/01/21 21:21:09 logger.go:31: Logger initialized
 [AGENTS_API] 2026/01/21 21:21:09 main.go:24: 🚀 Agents API starting
 [AGENTS_API] 2026/01/21 21:21:09 main.go:40: 🚀 Agents API running on :9000
+[AGENTS_API] 2026/02/15 00:04:23 logger.go:31: Logger initialized
+[AGENTS_API] 2026/02/15 00:04:23 main.go:24: 🚀 Agents API starting
+[AGENTS_API] 2026/02/15 00:04:23 main.go:40: 🚀 Agents API running on :9000
+[AGENTS_API] 2026/02/15 00:28:24 logger.go:31: Logger initialized
+[AGENTS_API] 2026/02/15 00:28:24 main.go:24: 🚀 Agents API starting
+[AGENTS_API] 2026/02/15 00:28:24 main.go:64: 🚀 Agents API running on :9000
+[AGENTS_API] 2026/02/15 12:22:11 logger.go:31: Logger initialized
+[AGENTS_API] 2026/02/15 12:22:11 main.go:25: 🚀 Agents API starting
+[AGENTS_API] 2026/02/15 12:22:13 main.go:31: ✅ CVE cache updated (last 7 days)
+[AGENTS_API] 2026/02/15 12:22:13 main.go:85: 🚀 Agents API running on :9000
+[AGENTS_API] 2026/02/15 21:55:57 main.go:42: ✅ CVE cache refreshed (last 7 days)
+[AGENTS_API] 2026/02/17 22:15:16 logger.go:31: Logger initialized
+[AGENTS_API] 2026/02/17 22:15:16 main.go:25: 🚀 Agents API starting
+[AGENTS_API] 2026/02/17 22:15:23 main.go:31: ✅ CVE cache updated (last 7 days)
+[AGENTS_API] 2026/02/17 22:15:23 main.go:85: 🚀 Agents API running on :9000
+[AGENTS_API] 2026/02/17 22:51:36 logger.go:31: Logger initialized
+[AGENTS_API] 2026/02/17 22:51:36 main.go:27: 🚀 Agents API starting
+[AGENTS_API] 2026/02/17 22:51:40 main.go:34: ✅ CVE cache loaded (last 7 days)
+[AGENTS_API] 2026/02/17 22:51:40 main.go:76: 🚀 Agents API running on :9000
+[AGENTS_API] 2026/02/17 22:51:58 dispatcher.go:4: Dispatching event to Watson AI
+[AGENTS_API] 2026/02/17 22:51:58 dispatcher.go:8: AI processing failed: WATSONX_API_KEYS not set
+[AGENTS_API] 2026/02/17 22:54:36 logger.go:31: Logger initialized
+[AGENTS_API] 2026/02/17 22:54:36 main.go:27: 🚀 Agents API starting
+[AGENTS_API] 2026/02/17 22:54:38 main.go:34: ✅ CVE cache loaded (last 7 days)
+[AGENTS_API] 2026/02/17 22:54:38 main.go:76: 🚀 Agents API running on :9000
+[AGENTS_API] 2026/02/17 22:55:04 dispatcher.go:4: Dispatching event to Watson AI
+[AGENTS_API] 2026/02/17 22:55:08 dispatcher.go:17: AI processing successful
+[AGENTS_API] 2026/02/17 23:04:51 logger.go:31: Logger initialized
+[AGENTS_API] 2026/02/17 23:04:51 main.go:27: 🚀 Agents API starting
+[AGENTS_API] 2026/02/17 23:05:11 main.go:32: ⚠️ Initial CVE fetch failed: Get "https://services.nvd.nist.gov/rest/json/cves/2.0?pubStartDate=2026-02-10T17:34:51Z&pubEndDate=2026-02-17T17:34:51Z": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+[AGENTS_API] 2026/02/17 23:05:11 main.go:76: 🚀 Agents API running on :9000
+[AGENTS_API] 2026/02/17 23:06:09 dispatcher.go:4: Dispatching event to Watson AI
+[AGENTS_API] 2026/02/17 23:06:19 dispatcher.go:8: AI processing failed: Post "https://iam.cloud.ibm.com/identity/token": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+[AGENTS_API] 2026/02/17 23:12:44 dispatcher.go:4: Dispatching event to Watson AI
+[AGENTS_API] 2026/02/17 23:12:49 dispatcher.go:8: AI processing failed: Watsonx failed 403: {"errors":[{"code":"user_authorization_failed","message":"Failed to find the IBMid-694001A801 member in project_id 913d34b6-2c2c-4fc7-9701-6b2ed8db5487 {\"id\":\"WSCPA0000E\",\"code\":401,\"error\":\"Unauthorized\",\"reason\":\"Failed to retrieve IAM user profile for IBMid-694001A801: Failed to verify user profile existance: moj2324158@sicsr.ac.in: [Request #650] Encountered an unacceptable status code: 404. Expected status codes: 200.\",\"message\":\"Access denied\"}","more_info":"https://cloud.ibm.com/apidocs/watsonx-ai#text-generation"}],"trace":"e37eb698a74549017ebd744126565733","status_code":403}
+[AGENTS_API] 2026/02/17 23:13:08 logger.go:31: Logger initialized
+[AGENTS_API] 2026/02/17 23:13:08 main.go:27: 🚀 Agents API starting
+[AGENTS_API] 2026/02/17 23:13:18 main.go:34: ✅ CVE cache loaded (last 7 days)
+[AGENTS_API] 2026/02/17 23:13:18 main.go:76: 🚀 Agents API running on :9000
+[AGENTS_API] 2026/02/17 23:13:25 dispatcher.go:4: Dispatching event to Watson AI
+[AGENTS_API] 2026/02/17 23:13:28 dispatcher.go:17: AI processing successful
+[AGENTS_API] 2026/02/17 23:15:50 logger.go:31: Logger initialized
+[AGENTS_API] 2026/02/17 23:15:50 main.go:27: 🚀 Agents API starting
+[AGENTS_API] 2026/02/17 23:15:52 main.go:34: ✅ CVE cache loaded (last 7 days)
+[AGENTS_API] 2026/02/17 23:15:52 main.go:76: 🚀 Agents API running on :9000
+[AGENTS_API] 2026/02/17 23:16:01 dispatcher.go:4: Dispatching event to Watson AI
+[AGENTS_API] 2026/02/17 23:16:04 dispatcher.go:17: AI processing successful
+[AGENTS_API] 2026/02/17 23:22:59 logger.go:31: Logger initialized
+[AGENTS_API] 2026/02/17 23:22:59 main.go:27: 🚀 Agents API starting
+[AGENTS_API] 2026/02/17 23:22:59 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/17 23:23:19 main.go:34: ⚠️ CVE initialization failed: context deadline exceeded (Client.Timeout or context cancellation while reading body)
+[AGENTS_API] 2026/02/17 23:23:19 main.go:81: 🚀 Agents API running on :9000
+[AGENTS_API] 2026/02/17 23:23:35 dispatcher.go:4: Dispatching event to Watson AI
+[AGENTS_API] 2026/02/17 23:23:38 dispatcher.go:17: AI processing successful
+[AGENTS_API] 2026/02/17 23:28:19 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/17 23:28:25 cve.go:78: ✅ Stored 442 network CVEs
+[AGENTS_API] 2026/02/17 23:28:25 main.go:56: 🔄 CVE cache checked (freshness enforced)
+[AGENTS_API] 2026/02/17 23:33:19 cve.go:55: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/17 23:33:19 main.go:56: 🔄 CVE cache checked (freshness enforced)
+[AGENTS_API] 2026/02/17 23:38:19 cve.go:55: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/17 23:38:19 main.go:56: 🔄 CVE cache checked (freshness enforced)
+[AGENTS_API] 2026/02/17 23:43:19 cve.go:55: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/17 23:43:19 main.go:56: 🔄 CVE cache checked (freshness enforced)
+[AGENTS_API] 2026/02/17 23:46:46 logger.go:31: Logger initialized
+[AGENTS_API] 2026/02/17 23:46:46 main.go:27: 🚀 Agents API starting
+[AGENTS_API] 2026/02/17 23:46:46 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/17 23:46:48 cve.go:78: ✅ Stored 409 network CVEs
+[AGENTS_API] 2026/02/17 23:46:48 main.go:36: ✅ CVE cache ready (network-focused, ≤15 min freshness)
+[AGENTS_API] 2026/02/17 23:46:48 main.go:81: 🚀 Agents API running on :9000
+[AGENTS_API] 2026/02/17 23:46:58 dispatcher.go:4: Dispatching event to Watson AI
+[AGENTS_API] 2026/02/17 23:47:01 dispatcher.go:17: AI processing successful
+[AGENTS_API] 2026/02/17 23:51:48 cve.go:55: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/17 23:51:48 main.go:56: 🔄 CVE cache checked (freshness enforced)
+[AGENTS_API] 2026/02/17 23:52:17 logger.go:31: Logger initialized
+[AGENTS_API] 2026/02/17 23:52:17 main.go:27: 🚀 Agents API starting
+[AGENTS_API] 2026/02/17 23:52:17 cve.go:55: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/17 23:52:17 main.go:36: ✅ CVE cache ready (network-focused, ≤15 min freshness)
+[AGENTS_API] 2026/02/17 23:52:17 main.go:81: 🚀 Agents API running on :9000
+[AGENTS_API] 2026/02/17 23:52:33 dispatcher.go:4: Dispatching event to Watson AI
+[AGENTS_API] 2026/02/17 23:52:35 dispatcher.go:17: AI processing successful
+[AGENTS_API] 2026/02/17 23:53:14 logger.go:31: Logger initialized
+[AGENTS_API] 2026/02/17 23:53:14 main.go:27: 🚀 Agents API starting
+[AGENTS_API] 2026/02/17 23:53:14 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/17 23:53:17 cve.go:78: ✅ Stored 45 network CVEs
+[AGENTS_API] 2026/02/17 23:53:17 main.go:36: ✅ CVE cache ready (network-focused, ≤15 min freshness)
+[AGENTS_API] 2026/02/17 23:53:17 main.go:81: 🚀 Agents API running on :9000
+[AGENTS_API] 2026/02/17 23:53:27 dispatcher.go:4: Dispatching event to Watson AI
+[AGENTS_API] 2026/02/17 23:53:30 dispatcher.go:17: AI processing successful
+[AGENTS_API] 2026/02/17 23:58:17 cve.go:55: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/17 23:58:17 main.go:56: 🔄 CVE cache checked (freshness enforced)
+[AGENTS_API] 2026/02/17 23:59:56 logger.go:31: Logger initialized
+[AGENTS_API] 2026/02/17 23:59:56 main.go:27: 🚀 Agents API starting
+[AGENTS_API] 2026/02/17 23:59:56 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/17 23:59:59 cve.go:78: ✅ Stored 17 network CVEs
+[AGENTS_API] 2026/02/17 23:59:59 main.go:36: ✅ CVE cache ready (network-focused, ≤15 min freshness)
+[AGENTS_API] 2026/02/17 23:59:59 main.go:81: 🚀 Agents API running on :9000
+[AGENTS_API] 2026/02/18 00:00:18 dispatcher.go:4: Dispatching event to Watson AI
+[AGENTS_API] 2026/02/18 00:00:21 dispatcher.go:17: AI processing successful
+[AGENTS_API] 2026/02/18 00:02:15 dispatcher.go:4: Dispatching event to Watson AI
+[AGENTS_API] 2026/02/18 00:02:18 dispatcher.go:8: AI processing failed: Watsonx failed 403: {"errors":[{"code":"user_authorization_failed","message":"Failed to find the IBMid-694001A801 member in project_id 913d34b6-2c2c-4fc7-9701-6b2ed8db5487 {\"id\":\"WSCPA0000E\",\"code\":401,\"error\":\"Unauthorized\",\"reason\":\"Failed to retrieve IAM user profile for IBMid-694001A801: Failed to verify user profile existance: moj2324158@sicsr.ac.in: [Request #712] Encountered an unacceptable status code: 404. Expected status codes: 200.\",\"message\":\"Access denied\"}","more_info":"https://cloud.ibm.com/apidocs/watsonx-ai#text-generation"}],"trace":"dfb4a19e6e92d51ef24ba35b2164441d","status_code":403}
+[AGENTS_API] 2026/02/18 00:02:28 dispatcher.go:4: Dispatching event to Watson AI
+[AGENTS_API] 2026/02/18 00:02:28 dispatcher.go:8: AI processing failed: IAM auth failed 400: {"errorCode":"BXNIM0415E","errorMessage":"Provided API key could not be found.","context":{"requestId":"dGdybWw-e05922b0938d4fe2ada44ce5adf6fef1","requestType":"incoming.Identity_Token","userAgent":"Go-http-client/1.1","url":"https://iam.cloud.ibm.com","instanceId":"iamid-11-2-5317-c27e010-78b4f79555-tgrml","threadId":"1409cf","host":"iamid-11-2-5317-c27e010-78b4f79555-tgrml","startTime":"17.02.2026 18:32:28:779 UTC","endTime":"17.02.2026 18:32:28:814 UTC","elapsedTime":"35","locale":"en_US","clusterName":"iam-id-prod-eu-de-fra04"}}
+[AGENTS_API] 2026/02/18 00:02:39 dispatcher.go:4: Dispatching event to Watson AI
+[AGENTS_API] 2026/02/18 00:02:41 dispatcher.go:17: AI processing successful
+[AGENTS_API] 2026/02/18 00:02:53 dispatcher.go:4: Dispatching event to Watson AI
+[AGENTS_API] 2026/02/18 00:02:54 dispatcher.go:8: AI processing failed: Watsonx failed 403: {"errors":[{"code":"user_authorization_failed","message":"Failed to find the IBMid-694001A801 member in project_id 913d34b6-2c2c-4fc7-9701-6b2ed8db5487 {\"id\":\"WSCPA0000E\",\"code\":401,\"error\":\"Unauthorized\",\"reason\":\"Failed to retrieve IAM user profile for IBMid-694001A801: Failed to verify user profile existance: moj2324158@sicsr.ac.in: [Request #646] Encountered an unacceptable status code: 404. Expected status codes: 200.\",\"message\":\"Access denied\"}","more_info":"https://cloud.ibm.com/apidocs/watsonx-ai#text-generation"}],"trace":"87d0c92b547a5f1ae7cc1d41eba68546","status_code":403}
+[AGENTS_API] 2026/02/18 00:03:03 dispatcher.go:4: Dispatching event to Watson AI
+[AGENTS_API] 2026/02/18 00:03:04 dispatcher.go:8: AI processing failed: IAM auth failed 400: {"errorCode":"BXNIM0415E","errorMessage":"Provided API key could not be found.","context":{"requestId":"cXZwMms-308a183bf77940e8bcedd77062890bca","requestType":"incoming.Identity_Token","userAgent":"Go-http-client/1.1","url":"https://iam.cloud.ibm.com","instanceId":"iamid-11-2-5317-c27e010-78b4f79555-qvp2k","threadId":"140265","host":"iamid-11-2-5317-c27e010-78b4f79555-qvp2k","startTime":"17.02.2026 18:33:04:140 UTC","endTime":"17.02.2026 18:33:04:176 UTC","elapsedTime":"36","locale":"en_US","clusterName":"iam-id-prod-eu-de-fra04"}}
+[AGENTS_API] 2026/02/18 00:03:59 dispatcher.go:4: Dispatching event to Watson AI
+[AGENTS_API] 2026/02/18 00:04:01 dispatcher.go:17: AI processing successful
+[AGENTS_API] 2026/02/18 00:04:07 dispatcher.go:4: Dispatching event to Watson AI
+[AGENTS_API] 2026/02/18 00:04:08 dispatcher.go:8: AI processing failed: Watsonx failed 403: {"errors":[{"code":"user_authorization_failed","message":"Failed to find the IBMid-694001A801 member in project_id 913d34b6-2c2c-4fc7-9701-6b2ed8db5487 {\"id\":\"WSCPA0000E\",\"code\":401,\"error\":\"Unauthorized\",\"reason\":\"Failed to retrieve IAM user profile for IBMid-694001A801: Failed to verify user profile existance: moj2324158@sicsr.ac.in: [Request #652] Encountered an unacceptable status code: 404. Expected status codes: 200.\",\"message\":\"Access denied\"}","more_info":"https://cloud.ibm.com/apidocs/watsonx-ai#text-generation"}],"trace":"88f00df598d9bf07800dc128ea228adc","status_code":403}
+[AGENTS_API] 2026/02/18 00:04:16 dispatcher.go:4: Dispatching event to Watson AI
+[AGENTS_API] 2026/02/18 00:04:17 dispatcher.go:8: AI processing failed: IAM auth failed 400: {"errorCode":"BXNIM0415E","errorMessage":"Provided API key could not be found.","context":{"requestId":"cTVsaHM-ce0f4a5365a44267b68b50b6743f86ef","requestType":"incoming.Identity_Token","userAgent":"Go-http-client/1.1","url":"https://iam.cloud.ibm.com","instanceId":"iamid-11-2-5317-c27e010-78b4f79555-q5lhs","threadId":"13c033","host":"iamid-11-2-5317-c27e010-78b4f79555-q5lhs","startTime":"17.02.2026 18:34:17:301 UTC","endTime":"17.02.2026 18:34:17:349 UTC","elapsedTime":"48","locale":"en_US","clusterName":"iam-id-prod-eu-de-fra04"}}
+[AGENTS_API] 2026/02/18 00:04:34 logger.go:31: Logger initialized
+[AGENTS_API] 2026/02/18 00:04:34 main.go:27: 🚀 Agents API starting
+[AGENTS_API] 2026/02/18 00:04:34 cve.go:55: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 00:04:34 main.go:36: ✅ CVE cache ready (network-focused, ≤15 min freshness)
+[AGENTS_API] 2026/02/18 00:04:34 main.go:81: 🚀 Agents API running on :9000
+[AGENTS_API] 2026/02/18 00:04:43 dispatcher.go:4: Dispatching event to Watson AI
+[AGENTS_API] 2026/02/18 00:04:45 dispatcher.go:17: AI processing successful
+[AGENTS_API] 2026/02/18 00:04:55 dispatcher.go:4: Dispatching event to Watson AI
+[AGENTS_API] 2026/02/18 00:04:56 dispatcher.go:8: AI processing failed: Watsonx failed 403: {"errors":[{"code":"user_authorization_failed","message":"Failed to find the IBMid-694001A801 member in project_id 913d34b6-2c2c-4fc7-9701-6b2ed8db5487 {\"id\":\"WSCPA0000E\",\"code\":401,\"error\":\"Unauthorized\",\"reason\":\"Failed to retrieve IAM user profile for IBMid-694001A801: Failed to verify user profile existance: moj2324158@sicsr.ac.in: [Request #653] Encountered an unacceptable status code: 404. Expected status codes: 200.\",\"message\":\"Access denied\"}","more_info":"https://cloud.ibm.com/apidocs/watsonx-ai#text-generation"}],"trace":"873af58c818a641ed784d54244cbf3f5","status_code":403}
+[AGENTS_API] 2026/02/18 15:11:42 logger.go:31: Logger initialized
+[AGENTS_API] 2026/02/18 15:11:42 main.go:27: 🚀 Agents API starting
+[AGENTS_API] 2026/02/18 15:11:42 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/18 15:11:44 main.go:34: ⚠️ CVE initialization failed: json: cannot unmarshal array into Go struct field .vulnerabilities.cve.configurations of type struct { Nodes []struct { CpeMatch []struct { Criteria string "json:\"criteria\""; Vulnerable bool "json:\"vulnerable\"" } "json:\"cpeMatch\"" } "json:\"nodes\"" }
+[AGENTS_API] 2026/02/18 15:11:44 main.go:81: 🚀 Agents API running on :9000
+[AGENTS_API] 2026/02/18 15:12:01 dispatcher.go:4: Dispatching event to Watson AI
+[AGENTS_API] 2026/02/18 15:12:05 dispatcher.go:17: AI processing successful
+[AGENTS_API] 2026/02/18 15:13:19 dispatcher.go:4: Dispatching event to Watson AI
+[AGENTS_API] 2026/02/18 15:13:21 dispatcher.go:8: AI processing failed: Watsonx failed 403: {"errors":[{"code":"user_authorization_failed","message":"Failed to find the IBMid-694001A801 member in project_id 913d34b6-2c2c-4fc7-9701-6b2ed8db5487 {\"id\":\"WSCPA0000E\",\"code\":401,\"error\":\"Unauthorized\",\"reason\":\"Failed to retrieve IAM user profile for IBMid-694001A801: Failed to verify user profile existance: moj2324158@sicsr.ac.in: [Request #734] Encountered an unacceptable status code: 404. Expected status codes: 200.\",\"message\":\"Access denied\"}","more_info":"https://cloud.ibm.com/apidocs/watsonx-ai#text-generation"}],"trace":"bdfdec9d07458058a87bdae848d29e0e","status_code":403}
+[AGENTS_API] 2026/02/18 15:16:44 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/18 15:16:46 main.go:52: ⚠️ CVE refresh error: json: cannot unmarshal array into Go struct field .vulnerabilities.cve.configurations of type struct { Nodes []struct { CpeMatch []struct { Criteria string "json:\"criteria\""; Vulnerable bool "json:\"vulnerable\"" } "json:\"cpeMatch\"" } "json:\"nodes\"" }
+[AGENTS_API] 2026/02/18 15:21:09 logger.go:31: Logger initialized
+[AGENTS_API] 2026/02/18 15:21:09 main.go:27: 🚀 Agents API starting
+[AGENTS_API] 2026/02/18 15:21:09 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/18 15:21:11 main.go:34: ⚠️ CVE initialization failed: json: cannot unmarshal array into Go struct field .vulnerabilities.cve.configurations of type struct { Nodes []struct { CpeMatch []struct { Criteria string "json:\"criteria\""; Vulnerable bool "json:\"vulnerable\"" } "json:\"cpeMatch\"" } "json:\"nodes\"" }
+[AGENTS_API] 2026/02/18 15:21:11 main.go:81: 🚀 Agents API running on :9000
+[AGENTS_API] 2026/02/18 15:21:20 dispatcher.go:4: Dispatching event to Watson AI
+[AGENTS_API] 2026/02/18 15:21:22 dispatcher.go:17: AI processing successful
+[AGENTS_API] 2026/02/18 15:23:08 logger.go:31: Logger initialized
+[AGENTS_API] 2026/02/18 15:23:08 main.go:28: 🚀 Agents API starting
+[AGENTS_API] 2026/02/18 15:23:08 main.go:34: 🌐 Initializing CVE cache...
+[AGENTS_API] 2026/02/18 15:23:08 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/18 15:23:10 main.go:39: ❌ CVE initialization FAILED: json: cannot unmarshal array into Go struct field .vulnerabilities.cve.configurations of type struct { Nodes []struct { CpeMatch []struct { Criteria string "json:\"criteria\""; Vulnerable bool "json:\"vulnerable\"" } "json:\"cpeMatch\"" } "json:\"nodes\"" }
+[AGENTS_API] 2026/02/18 15:23:10 main.go:89: 🚀 Agents API running on :9000
+[AGENTS_API] 2026/02/18 15:23:38 dispatcher.go:4: Dispatching event to Watson AI
+[AGENTS_API] 2026/02/18 15:23:41 dispatcher.go:17: AI processing successful
+[AGENTS_API] 2026/02/18 15:24:59 logger.go:31: Logger initialized
+[AGENTS_API] 2026/02/18 15:24:59 main.go:28: 🚀 Agents API starting
+[AGENTS_API] 2026/02/18 15:24:59 main.go:34: 🌐 Initializing CVE cache...
+[AGENTS_API] 2026/02/18 15:24:59 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/18 15:25:01 main.go:39: ❌ CVE initialization FAILED: json: cannot unmarshal array into Go struct field .vulnerabilities.cve.configurations of type struct { Nodes []struct { CpeMatch []struct { Criteria string "json:\"criteria\""; Vulnerable bool "json:\"vulnerable\"" } "json:\"cpeMatch\"" } "json:\"nodes\"" }
+[AGENTS_API] 2026/02/18 15:25:01 main.go:89: 🚀 Agents API running on :9000
+[AGENTS_API] 2026/02/18 15:30:01 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 15:30:01 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/18 15:30:05 main.go:60: ⚠️ CVE refresh error: json: cannot unmarshal array into Go struct field .vulnerabilities.cve.configurations of type struct { Nodes []struct { CpeMatch []struct { Criteria string "json:\"criteria\""; Vulnerable bool "json:\"vulnerable\"" } "json:\"cpeMatch\"" } "json:\"nodes\"" }
+[AGENTS_API] 2026/02/18 15:35:01 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 15:35:01 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/18 15:35:04 main.go:60: ⚠️ CVE refresh error: json: cannot unmarshal array into Go struct field .vulnerabilities.cve.configurations of type struct { Nodes []struct { CpeMatch []struct { Criteria string "json:\"criteria\""; Vulnerable bool "json:\"vulnerable\"" } "json:\"cpeMatch\"" } "json:\"nodes\"" }
+[AGENTS_API] 2026/02/18 15:40:01 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 15:40:01 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/18 15:40:03 main.go:60: ⚠️ CVE refresh error: json: cannot unmarshal array into Go struct field .vulnerabilities.cve.configurations of type struct { Nodes []struct { CpeMatch []struct { Criteria string "json:\"criteria\""; Vulnerable bool "json:\"vulnerable\"" } "json:\"cpeMatch\"" } "json:\"nodes\"" }
+[AGENTS_API] 2026/02/18 15:45:01 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 15:45:01 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/18 15:45:02 main.go:60: ⚠️ CVE refresh error: json: cannot unmarshal array into Go struct field .vulnerabilities.cve.configurations of type struct { Nodes []struct { CpeMatch []struct { Criteria string "json:\"criteria\""; Vulnerable bool "json:\"vulnerable\"" } "json:\"cpeMatch\"" } "json:\"nodes\"" }
+[AGENTS_API] 2026/02/18 15:50:01 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 15:50:01 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/18 15:50:03 main.go:60: ⚠️ CVE refresh error: json: cannot unmarshal array into Go struct field .vulnerabilities.cve.configurations of type struct { Nodes []struct { CpeMatch []struct { Criteria string "json:\"criteria\""; Vulnerable bool "json:\"vulnerable\"" } "json:\"cpeMatch\"" } "json:\"nodes\"" }
+[AGENTS_API] 2026/02/18 15:54:45 logger.go:31: Logger initialized
+[AGENTS_API] 2026/02/18 15:54:45 main.go:28: 🚀 Agents API starting
+[AGENTS_API] 2026/02/18 15:54:45 main.go:34: 🌐 Initializing CVE cache...
+[AGENTS_API] 2026/02/18 15:54:45 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/18 15:54:47 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/18 15:54:47 cve.go:80: ✅ Stored 1005 network CVEs
+[AGENTS_API] 2026/02/18 15:54:47 main.go:41: ✅ CVE cache initialized successfully
+[AGENTS_API] 2026/02/18 15:54:47 main.go:89: 🚀 Agents API running on :9000
+[AGENTS_API] 2026/02/18 15:56:02 dispatcher.go:4: Dispatching event to Watson AI
+[AGENTS_API] 2026/02/18 15:56:05 dispatcher.go:17: AI processing successful
+[AGENTS_API] 2026/02/18 15:59:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 15:59:47 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 15:59:47 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 16:04:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 16:04:47 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 16:04:47 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 16:09:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 16:09:47 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/18 16:09:49 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/18 16:09:49 cve.go:80: ✅ Stored 1005 network CVEs
+[AGENTS_API] 2026/02/18 16:09:49 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 16:14:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 16:14:47 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 16:14:47 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 16:19:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 16:19:47 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 16:19:47 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 16:24:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 16:24:47 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 16:24:47 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 16:29:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 16:29:47 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/18 16:29:49 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/18 16:29:49 cve.go:80: ✅ Stored 1005 network CVEs
+[AGENTS_API] 2026/02/18 16:29:49 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 16:34:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 16:34:47 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 16:34:47 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 16:39:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 16:39:47 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 16:39:47 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 16:44:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 16:44:47 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 16:44:47 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 16:49:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 16:49:47 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/18 16:49:49 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/18 16:49:49 cve.go:80: ✅ Stored 1009 network CVEs
+[AGENTS_API] 2026/02/18 16:49:49 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 16:54:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 16:54:47 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 16:54:47 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 16:59:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 16:59:47 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 16:59:47 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 17:04:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 17:04:47 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 17:04:47 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 17:09:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 17:09:47 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/18 17:09:49 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/18 17:09:49 cve.go:80: ✅ Stored 1009 network CVEs
+[AGENTS_API] 2026/02/18 17:09:49 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 19:45:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 19:45:01 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/18 19:45:03 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/18 19:45:03 cve.go:80: ✅ Stored 949 network CVEs
+[AGENTS_API] 2026/02/18 19:45:03 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 19:50:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 19:50:01 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 19:50:01 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 19:55:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 19:55:01 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 19:55:01 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 20:00:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 20:00:01 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 20:00:01 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 20:05:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 20:05:01 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/18 20:05:02 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/18 20:05:02 cve.go:80: ✅ Stored 973 network CVEs
+[AGENTS_API] 2026/02/18 20:05:02 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 20:10:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 20:10:01 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 20:10:01 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 20:15:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 20:15:01 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 20:15:01 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 20:20:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 20:20:01 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 20:20:01 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 20:25:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 20:25:01 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/18 20:25:04 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/18 20:25:04 cve.go:80: ✅ Stored 973 network CVEs
+[AGENTS_API] 2026/02/18 20:25:04 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 20:30:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 20:30:01 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 20:30:01 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 20:35:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 20:35:01 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 20:35:01 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 20:40:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 20:40:01 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 20:40:01 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 20:45:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 20:45:01 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/18 20:45:03 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/18 20:45:03 cve.go:80: ✅ Stored 973 network CVEs
+[AGENTS_API] 2026/02/18 20:45:03 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 20:50:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 20:50:01 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 20:50:01 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 20:55:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 20:55:01 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 20:55:01 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 21:00:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 21:00:01 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 21:00:01 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 21:05:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 21:05:01 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/18 21:05:04 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/18 21:05:04 cve.go:80: ✅ Stored 964 network CVEs
+[AGENTS_API] 2026/02/18 21:05:04 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 21:10:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 21:10:01 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 21:10:01 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 21:15:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 21:15:01 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 21:15:01 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 21:20:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 21:20:01 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 21:20:01 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 21:25:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 21:25:01 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/18 21:25:03 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/18 21:25:03 cve.go:80: ✅ Stored 964 network CVEs
+[AGENTS_API] 2026/02/18 21:25:03 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 21:30:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 21:30:01 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 21:30:01 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 21:35:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 21:35:01 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 21:35:01 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 21:40:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 21:40:01 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 21:40:01 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 21:45:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 21:45:01 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/18 21:45:05 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/18 21:45:05 cve.go:80: ✅ Stored 964 network CVEs
+[AGENTS_API] 2026/02/18 21:45:05 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 21:50:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 21:50:01 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 21:50:01 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 21:55:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 21:55:01 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 21:55:01 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 22:00:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 22:00:01 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 22:00:01 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 22:05:01 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 22:05:01 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/18 22:05:04 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/18 22:05:04 cve.go:80: ✅ Stored 983 network CVEs
+[AGENTS_API] 2026/02/18 22:05:04 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 22:10:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 22:10:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 22:10:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 22:15:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 22:15:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 22:15:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 22:20:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 22:20:01 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 22:20:01 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 22:25:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 22:25:00 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/18 22:25:07 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/18 22:25:07 cve.go:80: ✅ Stored 983 network CVEs
+[AGENTS_API] 2026/02/18 22:25:07 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 22:30:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 22:30:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 22:30:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 22:35:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 22:35:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 22:35:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 22:40:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 22:40:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 22:40:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 22:45:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 22:45:00 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/18 22:45:03 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/18 22:45:03 cve.go:80: ✅ Stored 983 network CVEs
+[AGENTS_API] 2026/02/18 22:45:03 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 22:50:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 22:50:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 22:50:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 22:55:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 22:55:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 22:55:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 23:00:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 23:00:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 23:00:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 23:05:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 23:05:01 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/18 23:05:03 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/18 23:05:03 cve.go:80: ✅ Stored 989 network CVEs
+[AGENTS_API] 2026/02/18 23:05:03 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 23:10:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 23:10:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 23:10:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 23:15:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 23:15:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 23:15:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 23:20:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 23:20:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 23:20:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 23:25:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 23:25:00 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/18 23:25:03 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/18 23:25:03 cve.go:80: ✅ Stored 989 network CVEs
+[AGENTS_API] 2026/02/18 23:25:03 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 23:30:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 23:30:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 23:30:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 23:35:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 23:35:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 23:35:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 23:40:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 23:40:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 23:40:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 23:45:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 23:45:00 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/18 23:45:03 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/18 23:45:03 cve.go:80: ✅ Stored 989 network CVEs
+[AGENTS_API] 2026/02/18 23:45:03 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 23:50:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 23:50:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 23:50:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/18 23:55:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/18 23:55:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/18 23:55:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 00:00:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 00:00:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 00:00:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 00:05:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 00:05:00 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/19 00:05:09 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/19 00:05:09 cve.go:80: ✅ Stored 992 network CVEs
+[AGENTS_API] 2026/02/19 00:05:09 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 00:10:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 00:10:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 00:10:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 00:15:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 00:15:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 00:15:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 00:20:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 00:20:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 00:20:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 00:25:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 00:25:00 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/19 00:25:02 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/19 00:25:02 cve.go:80: ✅ Stored 992 network CVEs
+[AGENTS_API] 2026/02/19 00:25:02 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 00:30:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 00:30:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 00:30:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 00:35:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 00:35:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 00:35:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 00:40:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 00:40:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 00:40:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 00:45:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 00:45:00 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/19 00:45:04 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/19 00:45:04 cve.go:80: ✅ Stored 992 network CVEs
+[AGENTS_API] 2026/02/19 00:45:04 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 00:50:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 00:50:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 00:50:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 00:55:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 00:55:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 00:55:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 01:00:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 01:00:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 01:00:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 01:05:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 01:05:00 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/19 01:05:05 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/19 01:05:05 cve.go:80: ✅ Stored 982 network CVEs
+[AGENTS_API] 2026/02/19 01:05:05 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 01:10:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 01:10:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 01:10:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 01:15:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 01:15:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 01:15:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 01:20:00 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 01:20:00 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 01:20:00 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 08:55:29 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 08:55:29 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/19 08:55:30 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/19 08:55:30 cve.go:80: ✅ Stored 905 network CVEs
+[AGENTS_API] 2026/02/19 08:55:30 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 09:00:29 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 09:00:29 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 09:00:29 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 09:05:29 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 09:05:29 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 09:05:29 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 09:10:29 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 09:10:29 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 09:10:29 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 09:15:29 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 09:15:29 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/19 09:15:30 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/19 09:15:30 cve.go:80: ✅ Stored 905 network CVEs
+[AGENTS_API] 2026/02/19 09:15:30 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 09:20:29 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 09:20:29 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 09:20:29 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 09:25:29 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 09:25:29 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 09:25:29 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 09:30:29 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 09:30:29 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 09:30:29 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 09:35:29 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 09:35:29 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/19 09:35:30 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/19 09:35:30 cve.go:80: ✅ Stored 905 network CVEs
+[AGENTS_API] 2026/02/19 09:35:30 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 09:40:29 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 09:40:29 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 09:40:29 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 09:45:29 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 09:45:29 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 09:45:29 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 09:50:29 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 09:50:29 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 09:50:29 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 09:55:29 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 09:55:29 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/19 09:55:30 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/19 09:55:30 cve.go:80: ✅ Stored 902 network CVEs
+[AGENTS_API] 2026/02/19 09:55:30 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 10:00:29 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 10:00:29 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 10:00:29 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 10:05:29 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 10:05:29 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 10:05:29 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 10:10:29 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 10:10:29 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 10:10:29 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 10:15:29 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 10:15:29 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/19 10:15:30 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/19 10:15:30 cve.go:80: ✅ Stored 902 network CVEs
+[AGENTS_API] 2026/02/19 10:15:30 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 14:42:49 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 14:42:49 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/19 14:42:51 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/19 14:42:51 cve.go:80: ✅ Stored 889 network CVEs
+[AGENTS_API] 2026/02/19 14:42:51 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 21:10:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 21:10:47 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/19 21:10:54 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/19 21:10:54 cve.go:80: ✅ Stored 1132 network CVEs
+[AGENTS_API] 2026/02/19 21:10:54 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 21:15:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 21:15:47 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 21:15:47 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 21:20:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 21:20:47 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 21:20:47 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 21:25:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 21:25:47 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 21:25:47 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 21:30:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 21:30:47 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/19 21:30:51 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/19 21:30:51 cve.go:80: ✅ Stored 1132 network CVEs
+[AGENTS_API] 2026/02/19 21:30:51 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 21:35:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 21:35:47 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 21:35:47 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 21:40:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 21:40:47 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 21:40:47 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 21:45:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 21:45:47 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 21:45:47 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 21:50:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 21:50:47 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/19 21:50:56 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/19 21:50:56 cve.go:80: ✅ Stored 1125 network CVEs
+[AGENTS_API] 2026/02/19 21:50:56 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 21:55:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 21:55:47 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 21:55:47 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 22:00:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 22:00:47 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 22:00:47 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 22:05:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 22:05:47 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 22:05:47 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 22:10:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 22:10:47 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/19 22:10:56 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/19 22:10:56 cve.go:80: ✅ Stored 1143 network CVEs
+[AGENTS_API] 2026/02/19 22:10:56 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 22:15:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 22:15:47 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 22:15:47 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 22:20:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 22:20:47 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 22:20:47 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 22:25:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 22:25:47 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 22:25:47 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 22:30:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 22:30:47 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/19 22:30:53 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/19 22:30:53 cve.go:80: ✅ Stored 1143 network CVEs
+[AGENTS_API] 2026/02/19 22:30:53 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 22:35:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 22:35:47 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 22:35:47 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 22:40:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 22:40:47 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 22:40:47 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/19 22:45:47 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/19 22:45:47 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/19 22:45:47 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 02:39:57 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 02:39:57 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/20 02:39:59 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/20 02:39:59 cve.go:80: ✅ Stored 1159 network CVEs
+[AGENTS_API] 2026/02/20 02:39:59 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 07:58:08 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 07:58:08 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/20 07:58:10 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/20 07:58:10 cve.go:80: ✅ Stored 1189 network CVEs
+[AGENTS_API] 2026/02/20 07:58:10 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 11:57:41 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 11:57:41 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/20 11:57:43 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/20 11:57:43 cve.go:80: ✅ Stored 1193 network CVEs
+[AGENTS_API] 2026/02/20 11:57:43 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 12:02:41 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 12:02:41 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/20 12:02:41 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 12:07:41 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 12:07:41 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/20 12:07:41 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 12:12:41 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 12:12:41 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/20 12:12:41 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 12:17:41 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 12:17:41 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/20 12:17:43 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/20 12:17:43 cve.go:80: ✅ Stored 1193 network CVEs
+[AGENTS_API] 2026/02/20 12:17:43 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 12:22:41 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 12:22:41 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/20 12:22:41 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 12:27:41 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 12:27:41 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/20 12:27:41 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 12:32:41 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 12:32:41 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/20 12:32:41 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 12:37:41 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 12:37:41 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/20 12:37:43 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/20 12:37:43 cve.go:80: ✅ Stored 1193 network CVEs
+[AGENTS_API] 2026/02/20 12:37:43 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 12:42:41 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 12:42:41 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/20 12:42:41 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 12:47:41 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 12:47:41 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/20 12:47:41 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 12:52:41 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 12:52:41 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/20 12:52:41 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 12:57:41 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 12:57:41 cve.go:60: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/20 12:57:43 cve.go:69: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/20 12:57:43 cve.go:80: ✅ Stored 1194 network CVEs
+[AGENTS_API] 2026/02/20 12:57:43 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 13:02:41 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 13:02:41 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/20 13:02:41 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 13:07:41 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 13:07:41 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/20 13:07:41 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 13:12:41 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 13:12:41 cve.go:56: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/20 13:12:41 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 13:15:01 logger.go:31: Logger initialized
+[AGENTS_API] 2026/02/20 13:15:01 main.go:28: 🚀 Agents API starting
+[AGENTS_API] 2026/02/20 13:15:01 main.go:34: 🌐 Initializing CVE cache...
+[AGENTS_API] 2026/02/20 13:15:01 cve.go:61: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/20 13:15:02 cve.go:70: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/20 13:15:02 cve.go:80: ✅ Stored 1194 CVEs
+[AGENTS_API] 2026/02/20 13:15:02 main.go:41: ✅ CVE cache initialized successfully
+[AGENTS_API] 2026/02/20 13:15:02 main.go:89: 🚀 Agents API running on :9000
+[AGENTS_API] 2026/02/20 13:15:22 dispatcher.go:4: Dispatching event
+[AGENTS_API] 2026/02/20 13:15:25 dispatcher.go:19: AI processing successful
+[AGENTS_API] 2026/02/20 13:16:53 logger.go:31: Logger initialized
+[AGENTS_API] 2026/02/20 13:16:53 main.go:28: 🚀 Agents API starting
+[AGENTS_API] 2026/02/20 13:16:53 main.go:34: 🌐 Initializing CVE cache...
+[AGENTS_API] 2026/02/20 13:16:53 cve.go:61: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/20 13:16:55 cve.go:70: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/20 13:16:55 cve.go:80: ✅ Stored 1194 CVEs
+[AGENTS_API] 2026/02/20 13:16:55 main.go:41: ✅ CVE cache initialized successfully
+[AGENTS_API] 2026/02/20 13:16:55 main.go:89: 🚀 Agents API running on :9000
+[AGENTS_API] 2026/02/20 13:17:07 dispatcher.go:4: Dispatching event
+[AGENTS_API] 2026/02/20 13:17:09 dispatcher.go:19: AI processing successful
+[AGENTS_API] 2026/02/20 13:21:55 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 13:21:55 cve.go:57: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/20 13:21:55 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 13:26:55 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 13:26:55 cve.go:57: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/20 13:26:55 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 13:31:55 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 13:31:55 cve.go:61: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/20 13:31:57 cve.go:70: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/20 13:31:57 cve.go:80: ✅ Stored 1194 CVEs
+[AGENTS_API] 2026/02/20 13:31:57 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 13:34:17 logger.go:31: Logger initialized
+[AGENTS_API] 2026/02/20 13:34:17 main.go:28: 🚀 Agents API starting
+[AGENTS_API] 2026/02/20 13:34:17 main.go:34: 🌐 Initializing CVE cache...
+[AGENTS_API] 2026/02/20 13:34:17 cve.go:57: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/20 13:34:17 main.go:41: ✅ CVE cache initialized successfully
+[AGENTS_API] 2026/02/20 13:34:17 main.go:89: 🚀 Agents API running on :9000
+[AGENTS_API] 2026/02/20 13:34:37 dispatcher.go:5: Dispatching event
+[AGENTS_API] 2026/02/20 13:34:39 dispatcher.go:20: AI processing successful
+[AGENTS_API] 2026/02/20 13:39:17 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 13:39:17 cve.go:57: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/20 13:39:17 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 13:44:17 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 13:44:17 cve.go:57: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/20 13:44:17 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 13:49:17 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 13:49:17 cve.go:61: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/20 13:49:19 cve.go:70: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/20 13:49:19 cve.go:80: ✅ Stored 1196 CVEs
+[AGENTS_API] 2026/02/20 13:49:19 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 13:54:17 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 13:54:17 cve.go:57: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/20 13:54:17 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 13:59:17 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 13:59:17 cve.go:57: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/20 13:59:17 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 14:04:17 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 14:04:17 cve.go:57: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/20 14:04:17 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 14:09:17 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 14:09:17 cve.go:61: 🌐 Fetching fresh CVEs from NVD
+[AGENTS_API] 2026/02/20 14:09:21 cve.go:70: ⚠️ No network CVEs found — using all CVEs
+[AGENTS_API] 2026/02/20 14:09:21 cve.go:80: ✅ Stored 1196 CVEs
+[AGENTS_API] 2026/02/20 14:09:21 main.go:64: ✅ CVE cache check complete
+[AGENTS_API] 2026/02/20 14:14:17 main.go:57: 🔄 Checking CVE cache freshness...
+[AGENTS_API] 2026/02/20 14:14:17 cve.go:57: ✅ Loaded CVEs from cache file
+[AGENTS_API] 2026/02/20 14:14:17 main.go:64: ✅ CVE cache check complete
