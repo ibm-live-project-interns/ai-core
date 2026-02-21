@@ -44,6 +44,27 @@ func main() {
 		logger.Info("✅ Watson AI client initialized")
 	}
 
+	// Initialize CVE/RAG pipeline (non-fatal - continues without CVEs if NVD unavailable)
+	if err := EnsureRecentNetworkCVEs(); err != nil {
+		logger.Warn("CVE initialization failed: %v. RAG context will be unavailable.", err)
+	} else {
+		cveCount := len(GetRecentCVEs())
+		logger.Info("CVE/RAG pipeline initialized with %d CVEs", cveCount)
+	}
+
+	// Background CVE cache refresh every 5 minutes
+	go func() {
+		ticker := time.NewTicker(5 * time.Minute)
+		defer ticker.Stop()
+		for range ticker.C {
+			if err := EnsureRecentNetworkCVEs(); err != nil {
+				logger.Warn("CVE background refresh failed: %v", err)
+			} else {
+				logger.Debug("CVE cache refreshed successfully")
+			}
+		}
+	}()
+
 	// Initialize API Gateway client for forwarding
 	apiGatewayURL := config.GetEnv("API_GATEWAY_URL", "http://api-gateway:8080")
 	gatewayClient = httpclient.NewClientWithBaseURL(apiGatewayURL)
@@ -65,10 +86,13 @@ func main() {
 		if watsonClient == nil {
 			status = "degraded"
 		}
+		cveCount := len(GetRecentCVEs())
 		c.JSON(http.StatusOK, gin.H{
-			"status":  status,
-			"service": "ai-core",
-			"watson":  watsonClient != nil,
+			"status":    status,
+			"service":   "ai-core",
+			"watson":    watsonClient != nil,
+			"cve_count": cveCount,
+			"rag":       cveCount > 0,
 		})
 	})
 
@@ -130,10 +154,18 @@ func handleEvent(c *gin.Context) {
 		return
 	}
 
-	// Call Watson AI
+	// Find relevant CVEs and build RAG context
+	relevantCVEs := FindRelevantCVEs(evt.Message)
+	ragContext := BuildCVERagBlockFromList(relevantCVEs)
+	if ragContext != "" {
+		logger.Debug("RAG context: %d CVEs matched for event type=%s", len(relevantCVEs), evt.Type)
+	}
+
+	// Call Watson AI with CVE/RAG context
 	aiReq := ai.AIRequest{
 		EventType: evt.Type,
 		Message:   evt.Message,
+		Context:   ragContext,
 	}
 
 	result, err := watsonClient.Analyze(aiReq)

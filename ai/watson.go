@@ -61,7 +61,7 @@ func DefaultWatsonConfig() WatsonConfig {
 		ModelID:      config.GetEnv("WATSONX_MODEL_ID", "ibm/granite-3-8b-instruct"),
 		Timeout:      time.Duration(config.GetEnvInt("WATSONX_TIMEOUT_SECONDS", 30)) * time.Second,
 		Temperature:  temperature,
-		MaxNewTokens: config.GetEnvInt("WATSONX_MAX_NEW_TOKENS", 200),
+		MaxNewTokens: config.GetEnvInt("WATSONX_MAX_NEW_TOKENS", 400),
 		IAMTokenURL:  config.GetEnv("IBM_IAM_TOKEN_URL", "https://iam.cloud.ibm.com/identity/token"),
 		APIVersion:   config.GetEnv("WATSONX_API_VERSION", "2024-01-10"),
 	}
@@ -284,14 +284,14 @@ func (c *WatsonClient) Analyze(req AIRequest) (*AIResponse, error) {
 
 // buildPrompt creates the prompt for Watson
 func (c *WatsonClient) buildPrompt(req AIRequest) string {
-	contextPart := ""
+	ragPart := ""
 	if req.Context != "" {
-		contextPart = fmt.Sprintf("\nAdditional context: %s", req.Context)
+		ragPart = req.Context + "\n"
 	}
 
-	return fmt.Sprintf(`<System data>
+	return fmt.Sprintf(`%s<System data>
 Event type: %s
-Event message: %s%s
+Event message: %s
 </System data>
 
 <Instructions>
@@ -302,15 +302,16 @@ You are a network operations AI analyst. Analyze the event and respond ONLY in v
 - impact: the business or operational impact of this event
 - recommended_action: specific steps to resolve or investigate
 - confidence: your confidence level in this analysis as an integer from 0 to 100
-Do NOT mention system data or how you derived the answer.
+Use CVE data from the Rag block ONLY if it is directly relevant to the event.
+Do NOT mention RAG, system data, or how you derived the answer.
 </Instructions>
 
 <Question>
 What is the severity, root cause, business impact, recommended action, and your confidence level for this event?
 </Question>`,
+		ragPart,
 		req.EventType,
 		req.Message,
-		contextPart,
 	)
 }
 
