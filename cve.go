@@ -164,8 +164,10 @@ func FindRelevantCVEs(text string) []CVE {
 
 	var result []CVE
 	for _, c := range items {
-		if strings.Contains(text, strings.ToLower(c.Vendor)) ||
-			strings.Contains(text, strings.ToLower(c.Product)) {
+		vendor := strings.ToLower(c.Vendor)
+		product := strings.ToLower(c.Product)
+		if (vendor != "" && strings.Contains(text, vendor)) ||
+			(product != "" && strings.Contains(text, product)) {
 			result = append(result, c)
 		}
 	}

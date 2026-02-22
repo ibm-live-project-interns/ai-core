@@ -1,6 +1,6 @@
 # AI Core Service
 
-AI-powered event analysis engine for the NOC Platform. Uses IBM Watson Granite 3-8B to classify network events by severity and recommend corrective actions.
+AI-powered event analysis engine for Sentrix. Uses IBM Watson Granite 3-8B to classify network events by severity and recommend corrective actions.
 
 ## Architecture
 
