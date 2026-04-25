@@ -99,8 +99,8 @@ func main() {
 	// Main AI processing endpoint
 	router.POST("/events", handleEvent)
 
-	// Start server
-	port := config.GetEnv("AI_CORE_PORT", "9000")
+	// Start server — Railway injects PORT; fall back to AI_CORE_PORT then 8080
+	port := config.GetEnv("PORT", config.GetEnv("AI_CORE_PORT", "8080"))
 	logger.Info("🚀 AI-Core running on :%s", port)
 	if err := router.Run(":" + port); err != nil {
 		logger.Fatal("❌ Failed to start AI-Core: %v", err)
