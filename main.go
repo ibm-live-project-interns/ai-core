@@ -190,7 +190,7 @@ func handleEvent(c *gin.Context) {
 		RootCause:         result.RootCause,
 		Impact:            result.Impact,
 		RecommendedAction: result.RecommendedAction,
-		Confidence:        result.Confidence,
+		Confidence:        result.ConfidenceInt(),
 	}
 
 	// Optionally forward enriched event to API Gateway
@@ -222,7 +222,7 @@ func forwardToAPIGateway(event EventRequest, aiResult *ai.AIResponse) {
 			"root_cause":         aiResult.RootCause,
 			"impact":             aiResult.Impact,
 			"recommended_action": aiResult.RecommendedAction,
-			"confidence":         float64(aiResult.Confidence),
+			"confidence":         float64(aiResult.ConfidenceInt()),
 		},
 	}
 

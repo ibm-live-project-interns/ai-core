@@ -199,12 +199,24 @@ type AIRequest struct {
 
 // AIResponse represents an AI analysis response
 type AIResponse struct {
-	Severity          string `json:"severity"`
-	Explanation       string `json:"explanation"`
-	RootCause         string `json:"root_cause"`
-	Impact            string `json:"impact"`
-	RecommendedAction string `json:"recommended_action"`
-	Confidence        int    `json:"confidence,omitempty"`
+	Severity          string      `json:"severity"`
+	Explanation       string      `json:"explanation"`
+	RootCause         string      `json:"root_cause"`
+	Impact            string      `json:"impact"`
+	RecommendedAction string      `json:"recommended_action"`
+	Confidence        json.Number `json:"confidence,omitempty"`
+}
+
+// ConfidenceInt returns confidence as an integer (handles string or number from LLM)
+func (r *AIResponse) ConfidenceInt() int {
+	if r.Confidence == "" {
+		return 0
+	}
+	f, err := r.Confidence.Float64()
+	if err != nil {
+		return 0
+	}
+	return int(f)
 }
 
 // Analyze sends an event to Watson for AI analysis
