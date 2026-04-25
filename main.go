@@ -80,8 +80,7 @@ func main() {
 	router.Use(middleware.SecurityHeaders())
 	router.Use(middleware.RateLimit())
 
-	// Health check
-	router.GET("/health", func(c *gin.Context) {
+	healthHandler := func(c *gin.Context) {
 		status := "healthy"
 		if watsonClient == nil {
 			status = "degraded"
@@ -94,7 +93,10 @@ func main() {
 			"cve_count": cveCount,
 			"rag":       cveCount > 0,
 		})
-	})
+	}
+	router.GET("/health", healthHandler)
+	// Railway project default healthcheck path alias
+	router.GET("/api/v1/health", healthHandler)
 
 	// Main AI processing endpoint
 	router.POST("/events", handleEvent)
